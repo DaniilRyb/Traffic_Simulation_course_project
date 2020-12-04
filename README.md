@@ -1,5 +1,5 @@
 # Traffic Simulationc course project
-# Powered by Daniil Rybakov ICS8-33
+# Developed by Daniil Rybakov ICS8-33
 ## Курсовой проект "Моделирование дорожного движения"
 ## Содержание
 ## Введение

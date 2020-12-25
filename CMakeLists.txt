@@ -100,15 +100,12 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 # Tests
 if (BUILD_TESTS)
 
-  add_executable(tests
-    tests/tests.cpp sources/MainWindow.cpp
+ target_include_directories(tests 
+  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
 
-    ${${PROJECT_NAME}_INCLUDE}
-    ${${PROJECT_NAME}_UI}
-    ${${PROJECT_NAME}_RESOURCE}
-    )
-  add_test(tests tests)
-
+  add_test(NAME unit_tests COMMAND tests) 
+  
   set_target_properties(tests PROPERTIES AUTOMOC TRUE)
   set_target_properties(tests PROPERTIES AUTOUIC TRUE)
   set_target_properties(tests PROPERTIES AUTORCC TRUE)

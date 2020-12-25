@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/DaniilRyb/Traffic_Simulation_course_project.svg?branch=development-branch-1)](https://travis-ci.com/DaniilRyb/Traffic_Simulation_course_project)
+
 ## Курсовой проект "Моделирование дорожного движения"
 ## Кафедра "Информационная безопаность", Москва 2020
 #### Developed by Daniil Rybakov ICS8-33

@@ -95,21 +95,4 @@ set_target_properties(${PROJECT_NAME} PROPERTIES AUTORCC TRUE)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
   ${PROJECT_NAME}Core
-  )
-
-# Tests
-if (BUILD_TESTS)
-
- target_include_directories(tests 
-  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-  add_test(NAME unit_tests COMMAND tests) 
   
-  set_target_properties(tests PROPERTIES AUTOMOC TRUE)
-  set_target_properties(tests PROPERTIES AUTOUIC TRUE)
-  set_target_properties(tests PROPERTIES AUTORCC TRUE)
-
-  target_link_libraries(tests PUBLIC Qt5::Test ${PROJECT_NAME}Core)
-
-endif ()

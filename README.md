@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/DaniilRyb/Traffic_Simulation_course_project.svg?branch=development-branch-1)](https://travis-ci.com/DaniilRyb/Traffic_Simulation_course_project)
+[![Coverage Status](https://coveralls.io/repos/github/DaniilRyb/Traffic_Simulation_course_project/badge.svg?branch=development-branch-1)](https://coveralls.io/github/DaniilRyb/Traffic_Simulation_course_project?branch=development-branch-1)
 
 ## Курсовой проект "Моделирование дорожного движения"
 ## Кафедра "Информационная безопаность", Москва 2020

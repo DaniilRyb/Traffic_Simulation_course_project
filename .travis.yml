@@ -18,6 +18,17 @@ matrix:
             - g++-8
             - qtdeclarative5-dev
             - cmake
+            - name: "Coveralls.io"
+    before_install:
+    - pyenv rehash
+    - pip install cpp-coveralls
+    - pyenv rehash
+    script:
+    - cmake -H. -B_build -DBUILD_TESTS=ON
+    - cmake --build _build
+    - ./_build/check
+    after_success:
+    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*"
 
 script:
   - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc

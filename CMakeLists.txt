@@ -94,5 +94,5 @@ set_target_properties(${PROJECT_NAME} PROPERTIES AUTOUIC TRUE)
 set_target_properties(${PROJECT_NAME} PROPERTIES AUTORCC TRUE)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
-  ${PROJECT_NAME}Core
+  ${PROJECT_NAME}Core)
   

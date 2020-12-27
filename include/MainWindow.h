@@ -13,7 +13,6 @@
 #include "TrafficPath.h"
 #include "PedSystem.h"
 #include "Car.h"
-#include "Bus.h"
 
 
 namespace Ui
@@ -34,7 +33,6 @@ private:
     void initPeds();
     void initLights();
     QList<Car *> cars;
-    QList<Bus *> bus;
     QVector<PedSystem *> pedSystems;
     QLabel *background;
     QVector<TrafficPath *> trafficPaths{16, nullptr};

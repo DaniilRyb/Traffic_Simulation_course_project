@@ -185,37 +185,21 @@ MainWindow::MainWindow()
 
     // Added new cars every 3.5 seconds
     auto *carTimer = new QTimer{this};
-    //auto *carTimer1 = new QTimer{this};
-   // auto *carTimer2 = new QTimer{this};
 
-
-    carTimer->setInterval(3500);
+    carTimer->setInterval(2000);
 
 
     connect(carTimer, &QTimer::timeout, [this]() {
         TrafficPath *path = nullptr;
-        TrafficPath *path1= nullptr;
-        TrafficPath *path2= nullptr;
-        TrafficPath *path3= nullptr;
 
 
         size_t attempts = 1;
         while (path == nullptr && attempts < 10) {
             std::mt19937 generator{std::random_device{}()};
-            std::mt19937 generator1{std::random_device{}()};
-            std::mt19937 generator2{std::random_device{}()};
-            std::mt19937 generator3{std::random_device{}()};
-
 
             std::uniform_int_distribution<size_t> random(0, trafficPaths.size() - 1);
-            std::uniform_int_distribution<size_t> random1(1, trafficPaths.size() - 1);
-            std::uniform_int_distribution<size_t> random2(4, trafficPaths.size() - 1);
-            std::uniform_int_distribution<size_t> random3(7, trafficPaths.size() - 1);
 
             path = trafficPaths[random(generator)];
-            path1 = trafficPaths[random1(generator1)];
-            path2 = trafficPaths[random2(generator2)];
-            path3 = trafficPaths[random3(generator3)];
 
 
             auto point = path->getPoints()[0];
@@ -238,11 +222,11 @@ MainWindow::MainWindow()
         }
 
 
-       /* auto *turnTimer = new QTimer{this};
+        auto *turnTimer = new QTimer{this};
         turnTimer->setInterval(5000);                       // попытка перестроения каждые 5 секунд
         connect(turnTimer, &QTimer::timeout, [this]() {
             std::vector<Car *> shuffleCars(cars.cbegin(), cars.cend());
-           // std::vector<Bus *> shuffleBus(bus.cbegin(), bus.cend());
+
 
             std::shuffle(
                 shuffleCars.begin(),shuffleCars.end(),std::mt19937{std::random_device{}()});
@@ -255,36 +239,22 @@ MainWindow::MainWindow()
                 }
             }
         });
-       // turnTimer->start();
-*/
+       turnTimer->start();
+
         Car *car = nullptr;
-        Car *car1 = nullptr;
-        Car *car2 = nullptr;
-        Car *car3 = nullptr;
+
 
         car = CarFactory::createCar(this, path);
-        car1 = CarFactory::createCar(this, path1);
-        car2 = CarFactory::createCar(this, path2);
-        car3 = CarFactory::createCar(this, path3);
+
 
 
         car->show();
-        car1->show();
-        car2->show();
-        car3->show();
         cars.push_back(car);
-        cars.push_back(car1);
-        cars.push_back(car2);
-        cars.push_back(car3);
+
 
         updateImageList.push_back(car);
         updateDataList.push_back(car);
-        updateImageList.push_back(car1);
-        updateDataList.push_back(car1);
-        updateImageList.push_back(car2);
-        updateDataList.push_back(car2);
-        updateImageList.push_back(car3);
-        updateDataList.push_back(car3);
+
     });
     carTimer->start();
 }

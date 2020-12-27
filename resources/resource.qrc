@@ -5,9 +5,7 @@
         <file>image/TrafficLightPed.png</file>
         <file>image/TrafficLightPedActive.png</file>
         <file>image/CarSpeed.png</file>
-        <file>image/CarTruck.png</file>
         <file>image/Ped.png</file>
-        <file>image/CarRare.png</file>
-        <file>../../Users/pocht/Desktop/Background.png</file>
+        <file>image/Background.png</file>
     </qresource>
 </RCC>

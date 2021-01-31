@@ -25,4 +25,4 @@ script:
   - mkdir -p .build
   - cd .build
   - cmake .. -DBUILD_TESTS=On
-  #- cmake --build .
+  - cmake --build .

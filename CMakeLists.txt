@@ -24,7 +24,6 @@ set(
   include/TrafficLightSystem.h
   include/TrafficPath.h
   include/TrafficPathPoint.h
-  include/Bus.h
   include/Car.h
   include/PedSystem.h
   include/CarFactory.h
@@ -36,7 +35,6 @@ set(
   sources/TrafficLightSystem.cpp
   sources/TrafficPath.cpp
   sources/TrafficPathPoint.cpp
-  sources/Bus.cpp
   sources/Car.cpp
   sources/PedSystem.cpp
   sources/CarFactory.cpp

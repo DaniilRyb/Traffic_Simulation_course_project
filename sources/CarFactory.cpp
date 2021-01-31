@@ -2,20 +2,10 @@
 
 const QVector<CarFactory::CarData> CarFactory::carData{
     {
-        ":/image/CarTruck.png",
-        {0, 0, 38, 22},
-        {50, 70},
-    },
-    {
-        ":/image/CarSpeed.png",
-        {0, 0, 30, 18},
-        {70, 80},
-    },
-    {
         ":/image/CarDefault.png",
         {0, 0, 30, 18},
         {35, 60},
-    },
+    }
 };
 
 Car *CarFactory::createCar(MainWindow *parent, TrafficPath *path)

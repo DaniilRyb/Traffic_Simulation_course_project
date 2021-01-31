@@ -4,7 +4,6 @@
 #include <QKeyEvent>
 #include <cmath>
 #include <random>
-#include <Bus.h>
 #include "Car.h"
 #include "CarFactory.h"
 #include "TrafficLight.h"
